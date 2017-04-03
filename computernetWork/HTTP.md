@@ -31,6 +31,12 @@ FxlRugatx63JLv7CWMD6UB_O_r
  第五行**Accept-Encoding**是浏览器用来告知服务器它能够支持的内容编码及内容编码的优先级顺序，可一次性指定多种内容编码。gzip：有文件压缩程序gzip生成的编码格式。deflate：组合使用zlib格式和deflate压缩算法生成的编码格式。sdch： Shared Dictionary Compression over HTTP字典压缩算法。
  第六行**User-Agent**代表浏览器信息。第七行**host**代表服务器域名。第八行**connection**代表是长连接还是短链接。第八行：**cookies**代表用户信息。
  2. 响应报文
+ ```
+ HTTP/1.1 200 OK
+Date: Sat, 31 Dec 2005 23:59:59 GMT
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 122
+```
  * 状态码：
     * 1xx：指示信息--表示请求已接收，继续处理。
     * 2xx：成功--表示请求已被成功接收、理解、接受。
@@ -45,5 +51,8 @@ FxlRugatx63JLv7CWMD6UB_O_r
      * 404 Not Found：请求资源不存在，举个例子：输入了错误的URL。
      * 500 Internal Server Error：服务器发生不可预期的错误。
      * 503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常，举个例子：HTTP/1.1 200 OK（CRLF）。
+#### Cookie的工作原理
+ * 当用户浏览某个使用cookie的网站时，该网站的服务器就为用户产生一个唯一的识别码，并以此在服务器端产生一个项目，并在给用户的响应报文中添加一个叫Set——cookie的首部行
+ * 当用户收到这个响应时，浏览器就在它管理的cookie文件中添加一行，其中包括这个服务器的主机名和set-cookie的识别码，以后此用户在此浏览这个网站时，每发送一个http的请求报文时，浏览器就回从其cookie文件中取出这个识别码，并放在http的请求报文中。如get的cookie的请求。
  
  
