@@ -14,5 +14,16 @@
  2. url是指响应地址，一般使用的是相对文档的内容，跨域请求通常会报错。  
  3. async如果是ture的话为异步，flase为同步。  
  4. user和passowrd的授权的用户的名和密码。  
-  
+ #### 3.setRequestHeader()的方法  
+ > 设置请求的主题
+ ```
+ request.setRequestHeader("Content-type","text/plain")
+ ```
+ 1. 类型为MIME的类型
+ #### 4.send方法
+ > 发送HTTP的请求
+ ```
+ request.send(null);
+ ```
+ 1. send的参数是发送的body，get没有body，所以可以写出null或者是省略。post一般和setrequestHeader一起使用。  
  
