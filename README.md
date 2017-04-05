@@ -1,2 +1,5 @@
-# myStudyNotes
-##这个仓库主要放了我的学习笔记
+## myStudyNotes  
+这里主要放了我的学习笔记  
+ #### 计算机网络
+ * HTTP
+ * HTTP和HTTPS的区别
