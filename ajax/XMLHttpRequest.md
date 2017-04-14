@@ -46,3 +46,4 @@
  ```js
  request.readystate==4&&status==2
  ```
+ 
